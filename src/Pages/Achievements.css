@@ -1,0 +1,504 @@
+/* Achievements Page */
+.achievements-page {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 60px 0 80px;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Fade Up Animation */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-title {
+    font-size: 2.8rem;
+    color: #0a2864;
+    margin-bottom: 15px;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+    letter-spacing: -0.5px;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+.header-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.header-decoration .line {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #0a2864, #ff6b6b, #ffd700);
+    border-radius: 4px;
+}
+
+.header-decoration .icon {
+    font-size: 2.5rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Section Title */
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.8rem;
+    color: #0a2864;
+    margin-bottom: 40px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #0a2864, #ff6b6b);
+    border-radius: 2px;
+}
+
+.title-icon {
+    font-size: 2rem;
+}
+
+/* Awards Section */
+.awards-section {
+    margin-bottom: 60px;
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Award Card */
+.award-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.award-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(10,40,100,0.15);
+    border-color: #0a2864;
+}
+
+.award-image-wrapper {
+    position: relative;
+    height:480px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f0f3f8, #ffffff);
+}
+
+.award-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.award-card:hover .award-image {
+    transform: scale(1.08);
+}
+
+.award-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #ffd700, #ffb700);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(255,215,0,0.4);
+    animation: pulse 2s infinite;
+    z-index: 2;
+}
+
+.badge-icon {
+    font-size: 1.5rem;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.award-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+.award-title {
+    font-size: 1.3rem;
+    color: #0a2864;
+    margin-bottom: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.award-description {
+    font-size: 0.98rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.award-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    margin-top: auto;
+}
+
+.award-year {
+    background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.award-type {
+    color: #0a2864;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: #f0f3f8;
+    padding: 6px 14px;
+    border-radius: 30px;
+}
+
+/* Stats Section */
+.stats-section {
+    margin: 70px 0 50px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(10,40,100,0.1);
+    border-color: #0a2864;
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ff6b6b;
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #0a2864;
+    font-weight: 600;
+}
+
+/* CTA Section */
+.cta-section {
+    margin-top: 60px;
+}
+
+.cta-content {
+    background: linear-gradient(135deg, #0a2864, #1a3a7a);
+    border-radius: 40px;
+    padding: 50px 40px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-content::before {
+    content: '🏆';
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    font-size: 10rem;
+    opacity: 0.1;
+    transform: rotate(-15deg);
+}
+
+.cta-content::after {
+    content: '🎖️';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    font-size: 10rem;
+    opacity: 0.1;
+    transform: rotate(15deg);
+}
+
+.cta-content h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+    position: relative;
+    z-index: 2;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    color: #0a2864;
+    padding: 16px 38px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+    background: #ffd700;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover .arrow {
+    transform: translateX(8px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .page-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .awards-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .achievements-page {
+        padding: 40px 0 60px;
+    }
+    
+    .page-title {
+        font-size: 1.8rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+    
+    .title-icon {
+        font-size: 1.6rem;
+    }
+    
+    .award-image-wrapper {
+        height: 200px;
+    }
+    
+    .award-title {
+        font-size: 1.2rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .cta-content {
+        padding: 40px 25px;
+    }
+    
+    .cta-content h3 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-title {
+        font-size: 1.5rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
+    }
+    
+    .header-decoration .line {
+        width: 50px;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+        flex-wrap: wrap;
+    }
+    
+    .award-content {
+        padding: 20px;
+    }
+    
+    .award-footer {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-card {
+        padding: 25px 15px;
+    }
+    
+    .cta-content {
+        padding: 30px 20px;
+    }
+    
+    .cta-content h3 {
+        font-size: 1.4rem;
+    }
+    
+    .cta-content p {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .achievements-page {
+        background: white;
+        padding: 20px;
+    }
+    
+    .header-decoration,
+    .award-badge,
+    .cta-section,
+    .stats-section {
+        display: none;
+    }
+    
+    .award-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+/* Loading Animation for Images */
+.award-image {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}

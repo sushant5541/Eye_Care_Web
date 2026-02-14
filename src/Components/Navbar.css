@@ -1,0 +1,160 @@
+/* Reset body margins to remove any gaps */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+  background: linear-gradient(to right, #8b00007a, #D4AF37); /* red → gold */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: 0;
+  padding: 0.6rem 0;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.navbar-nav {
+  font-weight: 500;
+}
+
+/* Navbar links */
+.nav-link {
+  color: #FFF8E7 !important; /* soft cream */
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  color: #FFD700 !important; /* gold hover */
+}
+
+.nav-link.active {
+  color: #FFD700 !important;
+  font-weight: 600;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  background-color: #FFF8E7; /* cream */
+  border: 1px solid #D4AF37; /* gold border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-item {
+  color: #8B0000; /* red text */
+  transition: all 0.25s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #FFD700; /* gold hover */
+  color: #8B0000;
+}
+
+.dropdown-item.active {
+  background-color: #8B0000;
+  color: #ffffff;
+}
+
+/* Donate button */
+.btn-donate {
+  background-color: #FFD700; /* gold */
+  border: none;
+  color: #8B0000; /* red text */
+  font-weight: 700;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-donate:hover {
+  background-color: #e6c200; /* darker gold */
+  color: #6b0000;
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    margin-top: 1rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0;
+  }
+
+  .ms-lg-3 {
+    margin-left: 0 !important;
+    margin-top: 1rem;
+  }
+
+  .btn-donate {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    height: 45px;
+  }
+
+  .nav-link {
+    font-size: 0.95rem;
+  }
+
+  .btn-donate {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Marquee Styles */
+.marquee-container {
+  overflow: hidden;
+  background: #FFF5E1; /* light cream */
+  border-top: 2px solid #D4AF37;
+  border-bottom: 2px solid #D4AF37;
+  padding: 10px 0;
+  width: 100%;
+  margin-top: 0;
+  display: block;
+  position: relative;
+}
+
+.marquee-track {
+  white-space: nowrap;
+  animation: move 30s linear infinite;
+  display: inline-block;
+}
+
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-track span {
+  color: #8B0000; /* red text */
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
