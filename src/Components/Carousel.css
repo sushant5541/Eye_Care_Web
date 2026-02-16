@@ -1,7 +1,7 @@
 /* src/components/Carousel.css */
 .carousel-container {
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 50px;
     padding: 0 20px;
     position: relative;
     width: 100%;
@@ -225,47 +225,53 @@
     background: #bbb;
 }
 
-/* ===== STATS SECTION - IMPROVED COLOR COMBINATIONS ===== */
+/* ===== STATS SECTION - LIGHT BLUE GRADIENT ===== */
 
-/* Option 1: Red & Gold Theme (matches your navbar) */
+/* Light Blue Gradient */
 .carousel-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 100%;
     max-width: 1200px;
-    margin: 10px auto 10px;
-    background: linear-gradient(135deg, #8b0000, #b8860b);
+    margin: 30px auto 50px;
+    background: linear-gradient(135deg, #344a89, #2a3a75);
     padding: 25px;
     border-radius: 15px;
     color: white;
     box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(33, 147, 176, 0.3);
 }
 
 .stat-item {
     text-align: center;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 10px;
     backdrop-filter: blur(5px);
     transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .stat-item:hover {
-    background: rgba(255, 215, 0, 0.2);
+    background: rgba(255, 255, 255, 0.25);
     transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #FFD700;
+    color: #ffffff;
     margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .stat-label {
     font-size: 1rem;
-    opacity: 0.9;
+    opacity: 0.95;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 /* Responsive Design */
@@ -285,12 +291,14 @@
     .carousel-stats {
         max-width: 90%;
         padding: 20px;
+        margin: 30px auto 40px;
     }
 }
 
 @media (max-width: 768px) {
     .carousel-container {
         padding: 0 15px;
+        margin-bottom: 40px;
     }
     
     .carousel-track {
@@ -327,7 +335,7 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 15px;
         padding: 20px;
-        margin: 20px auto 0;
+        margin: 20px auto 40px;
     }
     
     .stat-number {
@@ -342,6 +350,7 @@
 @media (max-width: 576px) {
     .carousel-container {
         padding: 0 10px;
+        margin-bottom: 30px;
     }
     
     .carousel-track {
@@ -393,7 +402,7 @@
         grid-template-columns: 1fr;
         gap: 12px;
         padding: 15px;
-        margin: 15px auto 0;
+        margin: 15px auto 30px;
         width: 100%;
     }
     
@@ -409,7 +418,7 @@
         font-size: 1.8rem;
         margin-bottom: 0;
         min-width: 80px;
-        color: #FFD700;
+        color: #ffffff;
     }
     
     .stat-label {
@@ -434,6 +443,10 @@
     
     .carousel-caption p {
         font-size: 0.85rem;
+    }
+    
+    .carousel-stats {
+        margin: 15px auto 25px;
     }
     
     .stat-item {
