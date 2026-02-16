@@ -123,7 +123,7 @@ const Footer = () => {
                     </ul>
 
                     <div className="footer-btn-container">
-                        <a href="/contact" className="footer-btn">
+                        <a href="/Contact" className="footer-btn">
                             <span>Contact Us</span>
                             <span className="btn-arrow">→</span>
                         </a>
