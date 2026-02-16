@@ -3,6 +3,7 @@
     background: #ffffff;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     overflow-x: hidden;
+    width: 100%;
 }
 
 /* Fade Up Animation */
@@ -22,6 +23,7 @@
     background: linear-gradient(135deg, #0a2864 0%, #1a3a7a 100%);
     padding: 80px 0;
     overflow: hidden;
+    width: 100%;
 }
 
 .hero-bg {
@@ -163,12 +165,14 @@
 .impact-section {
     padding: 80px 0;
     background: #f8f9fa;
+    width: 100%;
 }
 
 .section-header {
     text-align: center;
     max-width: 700px;
     margin: 0 auto 50px;
+    padding: 0 20px;
 }
 
 .section-header h2 {
@@ -179,6 +183,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .header-icon {
@@ -239,6 +244,7 @@
 /* ===== GALLERY SECTION ===== */
 .gallery-section {
     padding: 80px 0;
+    width: 100%;
 }
 
 .gallery-grid {
@@ -293,6 +299,8 @@
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 20px 60px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .project-block {
@@ -303,6 +311,8 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     border: 1px solid #eee;
     transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .project-block:hover {
@@ -321,6 +331,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-wrap: wrap;
 }
 
 .title-icon {
@@ -354,6 +365,7 @@
     position: relative;
     font-size: 1.05rem;
     color: #555;
+    word-break: break-word;
 }
 
 .project-body li::before {
@@ -407,6 +419,8 @@
     max-width: 1100px;
     margin: 0 auto 80px;
     padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .contact-card {
@@ -414,6 +428,8 @@
     border-radius: 30px;
     padding: 50px;
     color: white;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .contact-card h3 {
@@ -422,6 +438,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-wrap: wrap;
 }
 
 .contact-icon {
@@ -454,6 +471,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .contact-info {
@@ -470,6 +488,7 @@
     gap: 12px;
     font-size: 1.05rem;
     padding: 8px 0;
+    flex-wrap: wrap;
 }
 
 .info-icon {
@@ -528,6 +547,7 @@
     }
     .impact-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 }
 
@@ -535,6 +555,7 @@
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 30px;
     }
     .hero-tags {
         justify-content: center;
@@ -542,8 +563,13 @@
     .hero-buttons {
         justify-content: center;
     }
+    .hero-card {
+        max-width: 600px;
+        margin: 0 auto;
+    }
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
     .project-title {
         font-size: 1.4rem;
@@ -551,61 +577,273 @@
 }
 
 @media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
     .hero-left h1 {
         font-size: 1.8rem;
     }
+    
+    .hero-text {
+        font-size: 1rem;
+    }
+    
     .impact-grid {
         grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: 0 auto;
     }
+    
+    .counter-card {
+        padding: 25px 15px;
+    }
+    
+    .counter {
+        font-size: 2.5rem;
+    }
+    
     .gallery-grid {
         grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
     }
+    
+    .gallery-image-wrapper {
+        height: 220px;
+    }
+    
     .project-block {
-        padding: 30px;
+        padding: 30px 20px;
     }
+    
+    .project-title {
+        font-size: 1.3rem;
+    }
+    
+    .project-tagline {
+        font-size: 1rem;
+    }
+    
+    .project-body p,
+    .project-body li {
+        font-size: 0.95rem;
+    }
+    
     .project-footer {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
     }
+    
+    .project-meta {
+        text-align: center;
+    }
+    
+    .project-cta {
+        justify-content: center;
+    }
+    
     .contact-card {
-        padding: 30px;
+        padding: 30px 20px;
     }
+    
     .contact-card h3 {
         font-size: 1.6rem;
+    }
+    
+    .contact-tagline {
+        font-size: 1rem;
+    }
+    
+    .contact-body p,
+    .contact-body li,
+    .info-item {
+        font-size: 0.95rem;
+    }
+    
+    .contact-info {
+        padding: 20px;
+    }
+    
+    .contact-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-cta {
+        width: 100%;
+        justify-content: center;
     }
 }
 
 @media (max-width: 576px) {
+    .hero-section {
+        padding: 50px 0;
+    }
+    
     .hero-left h1 {
         font-size: 1.5rem;
     }
+    
     .hero-badge {
         font-size: 0.85rem;
+        padding: 8px 15px;
     }
+    
     .tag {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+        padding: 6px 12px;
     }
+    
     .btn-primary, .btn-secondary {
         width: 100%;
         justify-content: center;
+        padding: 12px 20px;
+        font-size: 0.95rem;
     }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-card {
+        padding: 15px;
+    }
+    
+    .hero-card img {
+        height: 200px;
+    }
+    
+    .hero-card p {
+        font-size: 0.9rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+    
+    .header-icon {
+        font-size: 1.6rem;
+    }
+    
+    .counter {
+        font-size: 2.2rem;
+    }
+    
+    .counter-label {
+        font-size: 1rem;
+    }
+    
+    .counter-note {
+        font-size: 0.85rem;
+    }
+    
+    .gallery-image-wrapper {
+        height: 200px;
+    }
+    
+    .gallery-label {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+    
+    .project-block {
+        padding: 25px 15px;
+    }
+    
     .project-title {
         font-size: 1.2rem;
-        flex-wrap: wrap;
+        gap: 8px;
     }
+    
+    .title-icon {
+        font-size: 1.5rem;
+    }
+    
+    .project-body li {
+        padding-left: 20px;
+        font-size: 0.9rem;
+    }
+    
+    .project-body li::before {
+        font-size: 1.2rem;
+    }
+    
     .project-meta {
-        width: 100%;
-        text-align: center;
+        font-size: 0.85rem;
+        padding: 8px 15px;
     }
+    
     .project-cta {
-        width: 100%;
-        justify-content: center;
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
-    .contact-footer {
-        flex-direction: column;
+    
+    .contact-card h3 {
+        font-size: 1.4rem;
     }
+    
+    .contact-icon {
+        font-size: 1.6rem;
+    }
+    
+    .contact-info {
+        padding: 15px;
+    }
+    
+    .info-item {
+        gap: 8px;
+    }
+    
+    .info-icon {
+        font-size: 1.1rem;
+    }
+    
     .contact-cta {
-        width: 100%;
-        justify-content: center;
+        padding: 12px 25px;
+        font-size: 0.95rem;
+    }
+    
+    .contact-meta {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero-left h1 {
+        font-size: 1.3rem;
+    }
+    
+    .hero-badge {
+        font-size: 0.8rem;
+    }
+    
+    .tag {
+        font-size: 0.7rem;
+    }
+    
+    .gallery-image-wrapper {
+        height: 180px;
+    }
+    
+    .project-title {
+        font-size: 1.1rem;
+    }
+    
+    .title-icon {
+        font-size: 1.3rem;
+    }
+    
+    .contact-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .contact-icon {
+        font-size: 1.4rem;
     }
 }

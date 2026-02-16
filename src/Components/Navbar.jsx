@@ -38,16 +38,16 @@ export default function Navbar(){
               </li>
 
               <li className="nav-item dropdown">
-                <a
+                <NavLink
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  to="#"
                   id="resourcesDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Resources
-                </a>
+                </NavLink>
                 <ul className="dropdown-menu" aria-labelledby="resourcesDropdown">
                   <li>
                     <NavLink className="dropdown-item" to="/gallery">
@@ -63,16 +63,16 @@ export default function Navbar(){
               </li>
 
               <li className="nav-item dropdown">
-                <a
+                <NavLink
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  to="#"
                   id="supportDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Support Us
-                </a>
+                </NavLink>
                 <ul className="dropdown-menu" aria-labelledby="supportDropdown">
                   <li>
                     <NavLink className="dropdown-item" to="/partnerships">
@@ -93,22 +93,22 @@ export default function Navbar(){
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="/recognitions">
+                <NavLink className="nav-link" to="/recognitions">
                   Recognitions
-                </a>
+                </NavLink>
               </li>
 
               <li className="nav-item dropdown">
-                <a
+                <NavLink
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  to="#"
                   id="workDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Our Work
-                </a>
+                </NavLink>
                 <ul className="dropdown-menu" aria-labelledby="workDropdown">
                   <li>
                     <NavLink className="dropdown-item" to="/activities">
