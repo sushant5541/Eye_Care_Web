@@ -225,15 +225,17 @@
     background: #bbb;
 }
 
-/* Stats - FIXED (colors preserved) */
+/* ===== STATS SECTION - IMPROVED COLOR COMBINATIONS ===== */
+
+/* Option 1: Red & Gold Theme (matches your navbar) */
 .carousel-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 100%;
     max-width: 1200px;
-    margin: 30px auto 0;
-    background: linear-gradient(135deg, #344a89, #2a3a75);
+    margin: 10px auto 10px;
+    background: linear-gradient(135deg, #8b0000, #b8860b);
     padding: 25px;
     border-radius: 15px;
     color: white;
@@ -250,14 +252,14 @@
 }
 
 .stat-item:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 215, 0, 0.2);
     transform: translateY(-5px);
 }
 
 .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #ffd93d;
+    color: #FFD700;
     margin-bottom: 5px;
 }
 
@@ -407,7 +409,7 @@
         font-size: 1.8rem;
         margin-bottom: 0;
         min-width: 80px;
-        color: #ffd93d; /* preserved original color */
+        color: #FFD700;
     }
     
     .stat-label {
